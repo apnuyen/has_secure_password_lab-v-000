@@ -8,5 +8,6 @@ class SessionsController < ApplicationController
     unless @user.authentication(params[:user][:password])
       session[:user_id] = @user.id
       redirect_to user_path(@user)
+    end 
   end
 end
